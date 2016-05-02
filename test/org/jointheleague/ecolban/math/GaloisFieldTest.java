@@ -32,15 +32,6 @@ public class GaloisFieldTest {
         assertEquals(9, c.getRep());
     }
 
-    @Test
-    public void testGetValues() {
-        GaloisField gf = new GaloisField(13);
-        GaloisField.Num[] expected = new GaloisField.Num[13];
-        for (int i = 0; i < 13; i++) {
-            expected[i] = gf.getNum(i);
-        }
-        assertArrayEquals(expected, gf.getValues());
-    }
 
     @Test
     public void testNumToString() {

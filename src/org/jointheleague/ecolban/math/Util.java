@@ -30,7 +30,7 @@ public class Util {
      *            a positive int
      * @param m
      *            a positive int greater than k and coprime with k
-     * @return n such that 0 < n < m and k * n % m == 0
+     * @return n such that 0 < n < m and k * n % m == 1
      */
     public static int modinv(int k, int m) {
         if (!(0 < k && k < m)) {
