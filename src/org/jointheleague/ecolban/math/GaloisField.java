@@ -31,7 +31,11 @@ public class GaloisField implements Iterable<GaloisField.Num> {
     }
 
     public Num getNum(int n) {
-        return new Num(n);
+        // 2bis. Complete code. Note that you have several options here:
+        // You can construct a new instance of Num each time this method is
+        // called, or you can construct all instances at once and store them in
+        // a list and retrieve the right element each time this method is
+        // called, or you can do something in between.
     }
 
     /**
@@ -45,8 +49,8 @@ public class GaloisField implements Iterable<GaloisField.Num> {
 
         private Num(int rep) {
             // 2. An element is defined as an equivalence class of integers that
-            // is such that the difference of any two integers equals 0 modulo
-            // p. For example, if p = 7, then
+            // is such that the difference of any two integers in the same class
+            // equals 0 modulo p. For example, if p = 7, then
             // the set {..., -13, -6, 1, 8, 15, ...} is an equivalence class.
             // Any member of a class is
             // called a representative of the class, and can be used as an
