@@ -39,9 +39,9 @@ public class GaloisFieldTest {
         GaloisField.Num a = gf.getNum(0);
         GaloisField.Num b = gf.getNum(-3);
         GaloisField.Num c = gf.getNum(100);
-        assertEquals("0", a.toString());
-        assertEquals("10", b.toString());
-        assertEquals("9", c.toString());
+        assertEquals("[0]", a.toString());
+        assertEquals("[10]", b.toString());
+        assertEquals("[9]", c.toString());
     }
 
     @Test

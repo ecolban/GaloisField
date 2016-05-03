@@ -132,13 +132,13 @@ public class GaloisField implements Iterable<GaloisField.Num> {
 
         @Override
         public String toString() {
-            return String.valueOf(rep);
+            //11. Complete code
         }
     } // end of Num class
 
     @Override
     public Iterator<Num> iterator() {
-        // 11. Complete code
+        // 12. Complete code
     }
 
 }

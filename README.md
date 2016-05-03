@@ -1,0 +1,14 @@
+#Galois Fields
+
+Galois fields are finite algebraic structures with two operations: addition and multiplications. The properties of these operations are the same that we are used to from the real numbers. The field has 0 (identity element for addition), and a 1 (identity for multiplication). Every element can be negated, and every element other than 0 can be inverted. The operations are commutative and associative and multiplication distributes over addition. 
+
+A Galois field with n elements is denoted GF(n). It has been proven that n must be a power of a prime number in order to have a field. Here we are only considering Galois fields GF(p), where p is a prime number.
+
+GF(p) is constructed as follows. We start with the integers *Z* and define an equivalence relation:
+    a ~ b if and only iff a - b is a multiple of p
+ 
+For example, if p = 7, then 13 ~ 20 because 13 - 20 = -7 = (-1) * 7. The subset of *Z* of all numbers that are equivalent to a particular number n is called the equivalence class of n and is denoted [n]. For any p, we have p distinct equivalence classes, which are [0], [1], ..., [p-1]. Any integer belongs to one of these equivalence classes. For example, if p = 7, and we choose any number, say 100, and we compute the remainder of 100 / 7, which is 2, we see that 100 ~ 2, because 100 - 2 = 98 = 14 * 7, and, hence 100 belongs to [2]. It is also the case that 2 belongs to [100]; in fact, [2] = [100].  We say that 2 and 100 are _representatives_ of the same class. If we chose a negative number, say -100, then the remainder of -100 / 7 is 5 (note that in Java -100 % 5 evaluates to -2 and you have to add 7 to get a non-negative remainder). So, [-100] = [5]. 
+
+These equivalence classes are our "numbers" in GF(p). We can define addition as [a] + [b] = [a + b] and multiplication as [a] * [b] = [a * b]. For example, if p = 7, [5] + [6] = [11] = [4] and [5] * [6] = [30] = [2]. The results are not dependent of the representatives chosen. For example, [5] = [-2] and [6] = [-1], so [5] + [6] = [-2] + [-1] = [-3] = [4], and [5] * [6] = [-2] * [-1] = [2]. Negating a number is straight forward; -[n] = [-n], but inverting a number is a little more complicated. The inverse of [n] is [k] if and only if [n] * [k] = [1]. For example, if p = 7, the inverse of [5] is [3], since [5] * [3] = [15] = [1]. The inverse of [4] is [2] and the inverse of [6] is [6]. The inverse of [0] is not defined. To find the inverse, we use Util.modinv(), which is provided.
+
+Since equivalence classes are infinite sets, we choose to represent in code each element of GF(p) by its _canonical representative_, i.e., the representative of the class that is in the interval [0, p). The string representation of a class is "[n]", where n is the canonical representative. 
