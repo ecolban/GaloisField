@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.jointheleague.ecolban.math.Util;
 import org.junit.Test;
 
 public class UtilTest {
@@ -38,6 +39,12 @@ public class UtilTest {
             fail("An exception should have been thrown.");
         } catch (IllegalArgumentException e) {
             assertEquals("Arguments are not coprime.", e.getMessage());
+        }
+        try {
+            Util.modinv(-5, 17);
+            fail("An exception should have been thrown.");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Both arguments must be positive and k < m.", e.getMessage());
         }
         //Some random tests
         for (int i = 0; i < 100; i++) {

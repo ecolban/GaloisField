@@ -34,7 +34,7 @@ public class Util {
      */
     public static int modinv(int k, int m) {
         if (!(0 < k && k < m)) {
-            throw new IllegalArgumentException("Arguments must be both positive and k < m.");
+            throw new IllegalArgumentException("Both arguments must be positive and k < m.");
         }
         int m0 = m;
         int x0 = 0;
