@@ -1,5 +1,8 @@
 package org.jointheleague.ecolban.math;
 
+/**
+ * @author Erik Colban &copy 2016
+ */
 public class Util {
     private Util() {
 

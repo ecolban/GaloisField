@@ -6,7 +6,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.jointheleague.ecolban.math.Util;
 import org.junit.Test;
-
+/**
+ * @author Erik Colban &copy; 2016
+ */
 public class UtilTest {
 
     @Test

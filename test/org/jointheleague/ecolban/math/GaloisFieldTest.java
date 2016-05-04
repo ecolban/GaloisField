@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * @author Erik Colban &copy; 2016
+ */
 public class GaloisFieldTest {
 
     @Test

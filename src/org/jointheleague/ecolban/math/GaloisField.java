@@ -7,7 +7,7 @@ import java.util.Iterator;
  * GF. Although the order of a GF can be a power of prime number, this
  * implementation only considers orders that are prime.
  * <p>
- * Erik Colban &copy; 2016
+ * @author Erik Colban &copy; 2016
  */
 public class GaloisField implements Iterable<GaloisField.Num> {
 
@@ -30,8 +30,15 @@ public class GaloisField implements Iterable<GaloisField.Num> {
         return p;
     }
 
+    /**
+     * 
+     * @param n
+     *            a representative (not necessarily canonical) of the element to
+     *            be returned
+     * @return the element of this GaloisField that has n as representative.
+     */
     public Num getNum(int n) {
-        // 2bis. Complete code. Note that you have several options here:
+        // 3. Complete code. Note that you have several options here:
         // You can construct a new instance of Num each time this method is
         // called, or you can construct all instances at once and store them in
         // a list and retrieve the right element each time this method is
@@ -47,6 +54,14 @@ public class GaloisField implements Iterable<GaloisField.Num> {
 
         private final int rep;
 
+        /**
+         * Constructs an element of the outer GaloisField instance. The argument
+         * rep must be a representative of this element.
+         * 
+         * @param rep
+         *            a representative (not necessarily canonical) of the
+         *            element to be constructed.
+         */
         private Num(int rep) {
             // 2. An element is defined as an equivalence class of integers that
             // is such that the difference of any two integers in the same class
@@ -68,14 +83,14 @@ public class GaloisField implements Iterable<GaloisField.Num> {
          * @return the canonical representative
          */
         public int getRep() {
-            // 3. Complete code
+            // 4. Complete code
         }
 
         /**
-         * @return the negative this
+         * @return the negative of this
          */
         public Num neg() {
-            // 4. Complete the code.
+            // 5. Complete the code.
         }
 
         /**
@@ -85,7 +100,7 @@ public class GaloisField implements Iterable<GaloisField.Num> {
          *             IllegalArgumentException if this is the zero element
          */
         public Num inv() {
-            // 5. Complete the code. Use Util.modinv.
+            // 6. Complete the code. Use Util.modinv.
         }
 
         /**
@@ -94,16 +109,16 @@ public class GaloisField implements Iterable<GaloisField.Num> {
          * @return the sum of this and b
          */
         public Num add(Num b) {
-            // 6. Complete the code
+            // 7. Complete the code
         }
 
         /**
          * @param b
          *            any element of this GF
-         * @return the sum of this and b
+         * @return the product of this and b
          */
         public Num mul(Num b) {
-            // 7. Complete the code
+            // 8. Complete the code
         }
 
         /**
@@ -112,7 +127,7 @@ public class GaloisField implements Iterable<GaloisField.Num> {
          * @return this minus b
          */
         public Num sub(Num b) {
-            // 8. Complete
+            // 9. Complete
         }
 
         /**
@@ -123,22 +138,22 @@ public class GaloisField implements Iterable<GaloisField.Num> {
          *             IllegalArgumentAxception if b is the zero element
          */
         public Num div(Num b) {
-            // 9. Complete
+            // 10. Complete
         }
 
-        // 10. Autogenerate the hashcode() and equals() methods. Two elements
+        // 11. Autogenerate the hashcode() and equals() methods. Two elements
         // are equal if they have
         // the same canonical representative.
 
         @Override
         public String toString() {
-            //11. Complete code
+            // 12. Complete code
         }
     } // end of Num class
 
     @Override
     public Iterator<Num> iterator() {
-        // 12. Complete code
+        // 13. Complete code
     }
 
 }
